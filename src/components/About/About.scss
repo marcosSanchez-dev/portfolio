@@ -1,0 +1,20 @@
+.container {
+  .text-zone {
+    ul {
+      list-style-type: none;
+      font-family: 'Coolvetica';
+      margin: 0;
+      margin-left: 5%;
+      padding: 0;
+      li {
+        opacity: 0;
+        display: block;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        animation: fadeInUp 2s 4s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+$--text-color: #42e2b8;
+$--h2-color: #42e2b8;
+$--mobile-breakpoint: 640px;
+$--tablet-breakpoint: 820px;
+
+.home-page {
+  .text-zone {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    max-height: 90%;
+    font-family: 'Coolvetica';
+  }
+  h1 {
+    font-size: 53px;
+    margin: 0;
+    font-weight: 400;
+    position: relative;
+    color: white;
+    background: #677db7;
+    border-radius: 40% 60% 37% 63% / 54% 57% 43% 46%;
+    width: 50%;
+    img {
+      width: 140px;
+      margin-left: 20px;
+
+      opacity: 0;
+      height: auto;
+      animation: rotateIn 4s linear both;
+      animation-delay: 0.8s;
+    }
+  }
+  h2 {
+    color: $--h2-color;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+    animation-delay: 3s;
+  }
+  .flat-button {
+    color: $--text-color;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid $--text-color;
+    margin-top: 25px;
+    float: left;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $--text-color;
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (max-width: $--mobile-breakpoint) {
+  .text-zone {
+    width: 80% !important;
+  }
+  h1 {
+    font-size: 43px !important;
+    img {
+      width: 15% !important;
+    }
+  }
+}
+
+@media screen and (max-width: $--tablet-breakpoint) {
+  .home-page {
+    .text-zone {
+      width: 80% !important;
+    }
+    h1 {
+      font-size: 73px !important;
+      img {
+        width: 15% !important;
+      }
+    }
+    h2 {
+      font-size: 25px;
+    }
+    .flat-button {
+      font-size: 23px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .home-page {
+    .text-zone {
+      h1 {
+        font-size: 45px !important;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .flat-button {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+}
