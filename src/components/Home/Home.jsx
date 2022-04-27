@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './Home.scss'
 import AnimatedLetters from '../AnimatedLetters/Animated'
 import { useState, useEffect } from 'react'
-import Logo from './Logo/Logo'
 import ThreeApp from '../threeJS/three'
 
 const Home = () => {

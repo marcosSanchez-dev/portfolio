@@ -1,4 +1,3 @@
-import { Link, NavLink } from 'react-router-dom'
 import './sidebar.scss'
 import LogoM from '../../assets/images/logo-m-nuevo.png'
 import LogoSubtitle from '../../assets/images/mar_sub.png'
@@ -10,24 +9,44 @@ import {
   faSoundcloud,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
+import { Link, NavLink } from 'react-router-dom'
+
 const Sidebar = () => (
   <div className="nav-bar">
-    <a className="logo" href="/">
+    <Link className="logo" to="/" target="_blank" rel="noopener noreferrer">
       <img src={LogoM} alt="logo" />
       <img className="sub-logo" src={LogoSubtitle} alt="marcos sanchez" />
-    </a>
+    </Link>
     <nav>
-      <a href="/" rel="noreferrer">
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        to="/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faHome} />
-      </a>
+      </NavLink>
 
-      <a href="../About" rel="noreferrer" className="about-link">
+      <NavLink
+        activeclassname="active"
+        className="about-link"
+        to="/about"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faUser} />
-      </a>
+      </NavLink>
 
-      <a href="../Contact" rel="noreferrer" className="contact-link">
+      <NavLink
+        activeclassname="active"
+        className="contact-link"
+        to="/contact"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faEnvelope} />
-      </a>
+      </NavLink>
     </nav>
     <ul>
       <li>
